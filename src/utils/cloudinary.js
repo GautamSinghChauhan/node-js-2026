@@ -20,7 +20,7 @@ const uploadOnCloudinary = async (localFilePath) => {
         const response = await cloudinary.uploader.upload(localFilePath, {
             resource_type: "image"
         });
-
+console.log("Cloudinary Response:", response);
         console.log("Cloudinary Success:", response.secure_url);
 
         if (fs.existsSync(localFilePath)) {
